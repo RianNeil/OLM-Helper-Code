@@ -8,7 +8,6 @@
 /*    2.1 - Forms and Inputs
 /*    2.2 - Links and Buttons
 
-/*
 /*  SECTION 3 - Header
 /*    3.1 - Branding
 /*    3.2 - Navigation
@@ -33,51 +32,122 @@
 /*  SECTION 7 - BUGS AND FIXES
 /*    7.1 - Checkout Quantity on Mobile View
 
+================================================================================
+================================================================================
+DEFINITIONS: 
 
+COMMENTS WITH 3 LINES ARE THE BEGINNING OF A NEW MAJOR SECTION
+COMMENTS WITH 2 LINES ARE THE BEGINNING OF A SUB SECTION
+COMMENTS WITH 1 LINE IS A DESCRIPTION ON THE CODE
 
+THE BELOW CODE USES TAB NESTED SASS, SO INDENT TO INDICATE PARENT CHILD RELATIONSHIP.
+
+================================================================================
+================================================================================
 
 
 /* =================== */
 /*      SECTION 1      */
 /* =================== */
 
-/* -- 1.1 Define Fonts -- */
+/*--    1.1 DEFINE FONTS     --*/
+/* ============================ */
 
 
-/* -- 1.2 SASS Variables -- */
-$brand-primary:#fff;
+/*--    1.2 SASS VARIABLES     --*/
+/* ============================ */
+
+/*-- COLORS --*/
+$brand-primary: $color;
+
+/*-- BUTTONS --*/
+$brand-secondary-button: $color;
+$brand-tertiary-button: $color;
+
+/*-- MISC --*/
+$placeholder-color: $value;
+$border-radius: $value;
+$header-alignment: center; /* Auto aligns headings. Values can be left, center, right */
 
 
-/* -- 1.3 Helper Classes -- */
+/*--    1.3  HELPER CLASSES     --*/
+/* ============================ */
 
+/*-- Add to Images & Promos to Behave like a button --*/
+.olm-btn-overlay img:hover{
+	opacity: .7;
+}
 
+/* Add this class to the logo in col. 1 of the footer */
+.footer-logo {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
 
 /* =================== */
 /*      SECTION 2      */
 /* =================== */
 
 
-/* -- 2.1 Forms and Inputs -- */
+/*--    2.1 Forms and Inputs     --*/
+/* ============================ */
+.form-control {
+	/* changes forms. Attributes can be color, background-color, and border-color */
+	border-radius: $border-radius;
+}
 
+/*-- PLACEHOLDERS --*/
+::-webkit-input-placeholder {
+  color: $placeholder-color !important;
+}
 
+:-moz-placeholder { /* Firefox 18- */
+  color: $placeholder-color !important;
+}
 
-/* -- 2.2 Links and Buttons -- */
+::-moz-placeholder {  /* Firefox 19+ */
+  color: $placeholder-color !important;
+}
+
+:-ms-input-placeholder {  
+  color: $placeholder-color !important;
+}
+
+/*--    2.2 Links and Buttons     --*/
+/* ================================ */
+
+/*-- PRIMARY BUTTONS --*/
+input#purchase {
+    /* Attributes can be text-transform, color, background */
+}
+
 
 
 /* ============================ */
 /*      SECTION 3 - HEADER     */
 /* ============================ */
 
-
-
 /*--    3.1  BRANDING     --*/
 /* ============================ */
 
+.brand{
+	/* Change branding Attributes */
+}
 
 
 /*--    3.2  NAVIGATION     --*/
 /* ============================ */
 
+.navbar-default {
+	/*-- Hamburger button --*/
+	.navbar-toggle {
+		/* Attributes can be border-color, background, float, or margin  */   
+	}
+	/*-- Hamburger Stripes --*/
+	.icon-bar {
+	    /*background: $color;*/
+	}	
+} 
 
 
 /* ================================== */
@@ -88,7 +158,7 @@ $brand-primary:#fff;
 /* ============================ */
 
 /* -- PRODUCT THUMBNAIL DETAILS -- */
-product-thumbnail{
+.product-thumbnail{
 	h4.product-title {
 		/* PRODUCT TITLE MODIFERS */
 	}	
@@ -102,7 +172,9 @@ product-thumbnail{
 /* ============================ */
 
 footer{
-	/* footer conten goes here */
+	h4{
+		margin-top:0;
+	}
 }
 
 
@@ -114,19 +186,24 @@ footer{
 /* ============================ */
 
 .template-index{
-	/* homepage content goes here */
+	h2#products-title {
+	    text-align: $header-alignment;
+	}
 }
+
 
 /*--    5.2  COLLECTION PAGE     --*/
 /* ============================ */
 
 .template-collection{
-	/* collection content goes here */
+	h1{
+		text-align: $header-alignment;
+	}
 }
+
 
 /*--    5.3  PRODUCT PAGE     --*/
 /* ============================ */
-
 
 .template-product{
 	#product-details h1 {
@@ -139,7 +216,10 @@ footer{
 /* ============================ */
 
 .template-cart{
-	/* cart content goes here */
+	/* Shipping and Notes Button Color */
+	input.get-rates.btn.btn-sm.btn-block.btn-default, a.btn.btn-default {
+	    background-color: $brand-secondary-button;
+	}
 }
 
 
@@ -163,13 +243,18 @@ footer{
 }
 
 /* -- 4.3 - Media Query - Tablet - (991px and Below) */
-@media screen and (min-width: 991px) {
+@media screen and (max-width: 991px) {
 	/*content goes here*/
 }
 
 /* -- 4.4 - Media Query - Tablet - (767px and Below) */
-@media screen and (min-width: 767px) {
-	/*content goes here*/
+@media screen and (max-width: 767px) {
+	section#collection-sort {
+	    display: none;
+	}
+	.collection--intro h1 {
+	    margin: 0 !important;
+	}	
 }
 
 
