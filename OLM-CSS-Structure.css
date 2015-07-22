@@ -129,7 +129,9 @@ footer{
 
 
 .template-product{
-	/* collection content goes here */
+	#product-details h1 {
+		/*- product title - attribuets size, color, casing -*/
+	}
 }
 
 
