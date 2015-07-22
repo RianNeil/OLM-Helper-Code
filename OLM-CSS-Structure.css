@@ -160,10 +160,10 @@ input#purchase {
 /* -- PRODUCT THUMBNAIL DETAILS -- */
 .product-thumbnail{
 	h4.product-title {
-		/* PRODUCT TITLE MODIFERS */
+		/* PRODUCT TITLE - attributes can be text-align, margin-top: 25%, */
 	}	
 	.product-price {
-		/* PRODUCT PRICE MODIFIERS */
+		/* PRODUCT PRICE- attributes can be text-align, font-size */
 	}
 }
 
