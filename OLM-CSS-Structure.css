@@ -187,7 +187,6 @@ footer{
 	}
 }
 
-
 /* -- Nav Dropdown fix-- */
 .nav a.btn.btn-primary.ajax-cart-btn.ajax-cart-view-btn {
   width: 48% !important;
@@ -199,4 +198,9 @@ footer{
 
 ul.cart-dropdown.dropdown-menu {
 	min-width:350px;
+}
+
+/*-- ADDS SPACE BELOW THE SHARE BUTTONS --*/
+.share-buttons.share-buttons-panel {
+    margin-bottom: 2em;
 }
