@@ -87,7 +87,15 @@ $brand-primary:#fff;
 /*--    4.1  MAIN CONTENT     --*/
 /* ============================ */
 
-
+/* -- PRODUCT THUMBNAIL DETAILS -- */
+product-thumbnail{
+	h4.product-title {
+		/* PRODUCT TITLE MODIFERS */
+	}	
+	.product-price {
+		/* PRODUCT PRICE MODIFIERS */
+	}
+}
 
 
 /*--    4.2  FOOTER     --*/
