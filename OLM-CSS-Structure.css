@@ -194,6 +194,10 @@ input#purchase {
 	}
 }
 
+ul.breadcrumb {
+    border-radius: $border-radius;
+}
+
 
 /*--    4.2  FOOTER     --*/
 /* ============================ */
@@ -250,6 +254,14 @@ footer{
 	/* Shipping and Notes Button Color */
 	input.get-rates.btn.btn-sm.btn-block.btn-default, a.btn.btn-default {
 	    @include brand-secondary-button;
+	}
+	/* Entire table background best to use RGBA with .125 alpha channel */
+	.table {
+	    /*background: $value;*/
+	}		
+	/* Zebra Striping */
+	.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
+		/*background: $color; */
 	}
 }
 
