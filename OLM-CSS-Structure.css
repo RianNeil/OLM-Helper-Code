@@ -58,7 +58,7 @@ THE BELOW CODE USES TAB NESTED SASS, SO INDENT TO INDICATE PARENT CHILD RELATION
 /* ============================ */
 
 /*-- COLORS --*/
-$brand-primary: $color;
+$brand-primary: black;
 
 /*-- BUTTONS --*/
 
@@ -67,7 +67,7 @@ $brand-primary: $color;
 	background: $value;
 	text-transform:uppercase;
 	font-weight:bold;*/
-	$border-radius: $value;
+	border-radius: $border-radius;
 }
 
 @mixin brand-secondary-button(){
@@ -75,7 +75,7 @@ $brand-primary: $color;
 	background: $value;
 	text-transform:uppercase;
 	font-weight:bold;*/
-	$border-radius: $value;
+	border-radius: $border-radius;
 }
 
 @mixin brand-tertiary-button(){
@@ -83,12 +83,12 @@ $brand-primary: $color;
 	background: $value;
 	text-transform:uppercase;
 	font-weight:bold;*/
-	$border-radius: $value;
+	border-radius: $border-radius;
 }
 
 /*-- MISC --*/
-$placeholder-color: $value;
-$border-radius: $value;
+$placeholder-color: black;
+$border-radius: 0;
 $header-alignment: center; /* Auto aligns headings. Values can be left, center, right */
 
 
@@ -161,6 +161,11 @@ input#purchase {
 	/* Change branding Attributes */
 }
 
+/* Change Logo Size */
+.navbar-brand img {
+   /* height: 150px;*/
+}
+
 
 /*--    3.2  NAVIGATION     --*/
 /* ============================ */
@@ -176,6 +181,12 @@ input#purchase {
 	}	
 } 
 
+/*- Change the Height of the TOP NAVBAR -*/
+nav#navbar-top {
+    /*height: 140px;*/
+}
+
+
 
 /* ================================== */
 /*      SECTION 4 - MAIN       */
@@ -183,6 +194,15 @@ input#purchase {
 
 /*--    4.1  MAIN CONTENT     --*/
 /* ============================ */
+
+/* REMOVES THE VIEW ALL TEXT ABOVE COLLECTION */
+h2.page-header a.small {
+    display: none;
+}
+
+ul.breadcrumb {
+    border-radius: $border-radius;
+}
 
 /* -- PRODUCT THUMBNAIL DETAILS -- */
 .product-thumbnail{
@@ -192,10 +212,6 @@ input#purchase {
 	.product-price {
 		/* PRODUCT PRICE- attributes can be text-align, font-size */
 	}
-}
-
-ul.breadcrumb {
-    border-radius: $border-radius;
 }
 
 
@@ -334,3 +350,9 @@ ul.cart-dropdown.dropdown-menu {
 .share-buttons.share-buttons-panel {
     margin-bottom: 2em;
 }
+
+/*--  FIXES LOGO SPACING IN FOOTER --*/
+.custom-footer-logo img {
+    margin-left: 0;
+}
+
