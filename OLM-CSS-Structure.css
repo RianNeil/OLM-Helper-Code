@@ -57,8 +57,15 @@ THE BELOW CODE USES TAB NESTED SASS, SO INDENT TO INDICATE PARENT CHILD RELATION
 /*--    1.2 SASS VARIABLES     --*/
 /* ============================ */
 
-/*-- COLORS --*/
-$brand-primary: black;
+/*-- SET COLORS --*/
+$brand-white: #fff;
+$brand-black: #242424;
+$brand-teal: #66ffff;
+
+/*-- SET  --*/
+$brand-primary: #d11f20; 
+$brand-secondary: $brand-teal;
+$brand-tertiary: $brand-black;
 
 /*-- BUTTONS --*/
 
@@ -170,7 +177,7 @@ input#purchase {
 /*--    3.2  NAVIGATION     --*/
 /* ============================ */
 
-.navbar-default {
+.navbar-default, toggle:focus {
 	/*-- Hamburger button --*/
 	.navbar-toggle {
 		/* Attributes can be border-color, background, float, or margin  */   
@@ -277,7 +284,8 @@ footer{
 	}		
 	/* Zebra Striping */
 	.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
-		/*background: $color; */
+		/* takes the tertiary color and lowers the opacity by 60% */
+		background: rgba($brand-tertiary, .6); 
 	}
 }
 
@@ -313,6 +321,9 @@ footer{
 	}
 	.collection--intro h1 {
 	    margin: 0 !important;
+	}	
+	ul.breadcrumb {
+		display: none;
 	}	
 }
 
@@ -356,3 +367,26 @@ ul.cart-dropdown.dropdown-menu {
     margin-left: 0;
 }
 
+/*-- Fix yotpo rating in thumbnail --*/
+.product-thumbnail{
+  span.yotpo-display-wrapper {
+      top: -25px;
+      position: relative;
+  }
+  .yotpo.bottomLine.yotpo-small {
+      height: 0;
+  }
+  .standalone-bottomline {
+      background: rgba(255,255,255,.5);
+  }
+  .yotpo-bottomline.pull-left.star-clickable {
+      position: absolute;
+      left: 30%;
+  }
+  @media screen and (max-width: 550px) {
+    .yotpo-bottomline.pull-left.star-clickable {
+        position: absolute;
+        left: 0;
+    }
+  }
+}
