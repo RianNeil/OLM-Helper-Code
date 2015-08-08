@@ -367,22 +367,31 @@ ul.cart-dropdown.dropdown-menu {
     margin-left: 0;
 }
 
-/*-- Fix yotpo rating in thumbnail --*/
+
+/* YOTPO PRODUCT THUMBNAIL FIX */
 .product-thumbnail{
   span.yotpo-display-wrapper {
       top: -25px;
       position: relative;
   }
+
+  .yotpo-bottomline {
+      background: rgba(255,255,255,.75) !important;
+  }
+
   .yotpo.bottomLine.yotpo-small {
       height: 0;
   }
+
   .standalone-bottomline {
       background: rgba(255,255,255,.5);
   }
+
   .yotpo-bottomline.pull-left.star-clickable {
       position: absolute;
-      left: 30%;
+      left: 10%; 
   }
+
   @media screen and (max-width: 550px) {
     .yotpo-bottomline.pull-left.star-clickable {
         position: absolute;
@@ -390,3 +399,5 @@ ul.cart-dropdown.dropdown-menu {
     }
   }
 }
+
+
